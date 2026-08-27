@@ -3,10 +3,14 @@
   "version": "1.0.0",
   "description": "Full-stack Air Quality & Weather Monitoring Dashboard (React + Node.js + Express + MongoDB + Leaflet + Three.js)",
   "scripts": {
+    "build": "npm install --prefix server && npm install --prefix client && npm run build --prefix client",
+    "start": "node server/server.js",
     "server": "node --watch server/server.js",
     "client": "npm --prefix client run dev",
-    "start": "node server/server.js",
-    "build": "npm --prefix client run build"
+    "install:all": "npm install --prefix server && npm install --prefix client"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "keywords": [
     "air-quality",
@@ -15,7 +19,8 @@
     "leaflet",
     "threejs",
     "mongodb",
-    "react"
+    "react",
+    "render"
   ],
   "author": "",
   "license": "MIT"

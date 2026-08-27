@@ -84,6 +84,28 @@ Designed with an elegant **light theme** (warm porcelain, cream-sand, and sage e
 
 ---
 
+## 🚀 Render Deployment (Production)
+
+This repository is pre-configured for **1-click / zero-configuration deployment to [Render](https://render.com)**.
+
+See the full step-by-step guide in [RENDER_DEPLOYMENT_GUIDE.md](file:///c:/Users/HP/Downloads/project1/RENDER_DEPLOYMENT_GUIDE.md).
+
+### Quick Deploy Summary:
+1. Push repository to **GitHub**.
+2. In [Render Dashboard](https://dashboard.render.com), click **New +** > **Blueprint** and select this repo (uses `render.yaml`).
+3. Set your **`MONGODB_URI`** environment variable (Free MongoDB Atlas connection string).
+4. Render will automatically build the React frontend (`npm run build`) and start the unified server (`npm start`)!
+
+| Parameter | Value |
+|---|---|
+| **Build Command** | `npm run build` |
+| **Start Command** | `npm start` |
+| **Node Engine** | `>=18.0.0` |
+| **Health Check** | `/api/health` |
+
+
+---
+
 ## 📡 API Endpoints
 
 | Method | Endpoint | Description |

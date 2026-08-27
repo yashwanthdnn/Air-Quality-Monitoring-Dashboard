@@ -1,0 +1,21 @@
+# Render Blueprint Specification
+# Deploy full-stack AeroPulse on Render with 1-click Blueprint
+version: "1"
+services:
+  - type: web
+    name: aeropulse-air-quality
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: JWT_SECRET
+        generateValue: true
+      - key: MONGODB_URI
+        sync: false
